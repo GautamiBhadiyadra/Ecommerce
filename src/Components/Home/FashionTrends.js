@@ -7,6 +7,7 @@ const FashionTrends = () => {
     }, [])
     return (
         <div className='pt-24'>
+        <div></div>
             <div data-aos="fade-down"
                 data-aos-easing="linear"
                 data-aos-duration="1500">
