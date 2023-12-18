@@ -199,12 +199,12 @@ const ProductDetail = () => {
                                 >
                                     Archive
                                 </a>
-                                <a
+                                <link
                                     href="#"
                                     className="shrink-0 rounded-t-lg border border-gray-300 border-b-white p-3 text-sm font-medium text-sky-600"
                                 >
                                     Notifications
-                                </a>
+                                </link>
                             </nav>
                         </div>
                     </div>
