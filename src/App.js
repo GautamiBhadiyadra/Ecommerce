@@ -6,8 +6,11 @@ import BlogHome from './Blog/BlogHome';
 import ContactHome from './Contact/ContactHome';
 
 import ShoppingBagHome from './Components/Shop/ShoppingBag/ShoppingBagHome';
-import CheckOutHome from './Components/Shop/Chechout/CheckOutHome';
+
 import ViewMore from './Components/Shop/ProductDetail/ViewMore';
+import CheckOutHome from './Components/Shop/Checkout/CheckOutHome';
+import Login from './Components/Common/Login';
+import Register from './Components/Common/Register';
 
 function App() {
   return (
@@ -20,6 +23,10 @@ function App() {
         <Route path="/shoppingbag" element={<ShoppingBagHome />} />
         <Route path="/checkout" element={<CheckOutHome />} />
         <Route path="/viewmore" element={<ViewMore />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+
       </Routes>
     </div>
   );

@@ -5,11 +5,28 @@ import Search from '../Icon/Search';
 import Cart from '../Icon/Cart';
 import Main from '../Icon/Main';
 import { Link } from 'react-router-dom';
+import { Man } from '@mui/icons-material';
+import Mainas from '../Icon/Mainas';
+import Login from './Login';
 const Nave = (props) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    console.log(props);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+    const openLoginModal = (e) => {
+        e.stopPropagation();
+        setIsLoginModalOpen(true);
+    };
+
+    const closeLoginModal = () => {
+        setIsLoginModalOpen(false);
     };
 
     return (
@@ -89,17 +106,43 @@ const Nave = (props) => {
                                 >
                                     <Cart />
                                 </div>
-                                <div
+                                <div className="relative">
+                                    <button
+                                        id="dropdownUserAvatarButton"
+                                        onClick={toggleDropdown}
+                                        className="text-white   border-none font-medium  text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 "
+                                        type="button"
+                                    >
+                                        <span className="sr-only">Open user menu</span>
+                                        <Main />
+                                    </button>
+                                    {/* Dropdown content */}
+                                    {isDropdownOpen && (
+                                        <div className="absolute right-0 mt-2 w-40 bg-white divide-y divide-gray-100 rounded-lg shadow-lg dark:bg-gray-700 dark:divide-gray-600 z-10">
+                                            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
+                                                <li>
+                                                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">LogOut</a>
+                                                </li>
+                                                <li>
+                                                    <span onClick={(e) => openLoginModal(e)} className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer">
+                                                        LogIn
+                                                    </span>
 
-                                    className="text-white  focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                                >
-                                    <Main />
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    )}
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </nav>
             </div>
+            {isLoginModalOpen && (
+                <Login />
+            )}
         </div>
 
     )
