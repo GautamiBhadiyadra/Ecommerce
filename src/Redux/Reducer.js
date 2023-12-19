@@ -26,6 +26,26 @@ const inistialstate = {
               error: action.payload
             };
             break;
+            case "LOGIN_REQUEST":
+                return {
+                  ...state,
+                  loading: true
+                };
+                break;
+              case "LOGIN_SUCCESS":
+                return {
+                  ...state,
+                  loading: false,
+                  data: action.payload
+                };
+                break;
+              case "LOGIN_FAILURE":
+                return {
+                  ...state,
+                  loading: false,
+                  error: action.payload
+                };
+                break;
       default:
         return state;
     }

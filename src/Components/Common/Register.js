@@ -26,7 +26,7 @@ const Register = () => {
     };
     const handleFileChange = (e) => {
         const file = e.target.files[0];
-        console.log("filefile",file);
+        console.log("filefile", file);
         setFormData({
             ...formData,
             profile: file, // Store the file in component state
@@ -54,7 +54,7 @@ const Register = () => {
             address: '',
             city: '',
         });
-        window.location.href = '/';
+        window.location.href = '/singin';
     };
     console.log("data", data);
 
@@ -87,7 +87,7 @@ const Register = () => {
                                     </div>
                                     <div classNameName='mb-3'>
                                         <label for="profile" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Profile</label>
-                                        <input type="file" name="profile" className=" border border-[#C4C4C4] text-gray-900 sm:text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600  dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={handleFileChange}/>
+                                        <input type="file" name="profile" className=" border border-[#C4C4C4] text-gray-900 sm:text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600  dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={handleFileChange} />
                                     </div>
                                     <div classNameName='mb-3'>
                                         <label for="address" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
