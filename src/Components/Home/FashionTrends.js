@@ -12,7 +12,6 @@ const FashionTrends = () => {
                 data-aos-duration="1500">
                 <div className='container my-0 mx-auto ' >
                     <div class="text-center max-w-2xl mx-auto">
-
                         <h1 className='text-[38px] mb-10  font-semibold  md:text-4xl'>
                             Best current fashion trends that are having a moment right now
                         </h1>

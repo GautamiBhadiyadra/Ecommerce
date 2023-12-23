@@ -96,7 +96,6 @@ export const SpecialOffer = () => {
                             <div className='p-7'>
                                 <div class="relative w-full mb-6">
                                     <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm h-[50px] text-black bg-[#F4F4F4] rounded-e-lg  border border-gray-300  focus:border-[[#F4F4F4]]   dark:placeholder-black dark:text-white dark:focus:border-blue-500" placeholder="Search Product here" required />
-
                                     <button type="submit" class="absolute top-0 end-0 p-3.5 text-sm font-medium h-[50px] text-black bg-[#FFC224] rounded-e-lg border  focus:ring-4 focus:outline-none  ">
                                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
